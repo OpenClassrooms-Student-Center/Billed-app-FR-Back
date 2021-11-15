@@ -1,0 +1,41 @@
+{
+  "name": "billapp-backend",
+  "version": "1.0.0",
+  "description": "backend app for billapp",
+  "main": "server.js",
+  "author": "techer jean sebastien <techerjeansebastien.pro@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test sequelize-cli db:migrate && jest test -i tests/user.test.js --watch",
+    "run:dev": "NODE_ENV=development sequelize-cli db:migrate && node server.js",
+    "lint": "eslint ./"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "sequelize": "^6.9.0",
+    "short-uuid": "^4.2.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.3.1",
+    "sequelize-cli": "^6.3.0",
+    "sequelize-fixtures": "^1.2.0",
+    "superagent": "^6.1.0",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ]
+  }
+}
