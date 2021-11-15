@@ -1,0 +1,5 @@
+database_*.sqlite
+uploads/**/*
+public/**/*
+node_modules/
+coverage/
