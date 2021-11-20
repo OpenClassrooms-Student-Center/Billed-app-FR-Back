@@ -33,7 +33,7 @@ describe("Test the root path", () => {
       .post("/auth/login")
       .send({ email: "john-doe@domain.t", password: "mot-de-passe" })
       .set("Accept", "application/json")
-      .expect(500);
+      .expect(400);
   });
 
   test("It should loggout a user", () => {
