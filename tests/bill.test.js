@@ -132,6 +132,22 @@ describe("Test the root path", () => {
       .expect(201);
   });
 
+  test("It should create a bill with non picture file type and not save file", () => {
+    return request(app)
+      .post("/bills")
+      .set("Authorization", `Bearer ${jwtValue}`)
+      .set("Accept", "multipart/form-data")
+      .field('name','bill-name')
+      .attach('file', 'tests/fixture-cat.pdf')
+      .then((response) => {
+        expect(response.body).toMatchObject({
+          name: 'bill-name',
+          fileName: false,
+          filePath: false,
+        });
+      });
+  });
+
   test("It should update a bill as admin", () => {
     return request(app)
       .patch("/bills/47qAXb6fIm2zOKkLzMrb")

@@ -1,5 +1,3 @@
-database_*.sqlite
-uploads/**/*
-public/**/*
+database_test.sqlite
 node_modules/
 coverage/

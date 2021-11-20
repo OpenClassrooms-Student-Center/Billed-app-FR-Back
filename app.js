@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
-app.use('/uploads', express.static('uploads'));
+app.use('/public', express.static('public'));
 app.get('/', (req, res) => {
   res.status(200).send('Bill app backend API v1');
 });
