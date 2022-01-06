@@ -23,7 +23,7 @@ npm install
 ### Lancer l'API :
 
 ```
-npm run:dev
+npm run run:dev
 ```
 
 ### Accéder à l'API :
