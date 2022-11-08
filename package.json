@@ -6,13 +6,14 @@
   "author": "techer jean sebastien <techerjeansebastien.pro@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test sequelize-cli db:migrate && jest test -i tests/user.test.js --watch",
-    "run:dev": "NODE_ENV=development sequelize-cli db:migrate && node server.js",
+    "test": "cross-env NODE_ENV=test sequelize-cli db:migrate && jest test -i tests/user.test.js --watch",
+    "run:dev": "cross-env NODE_ENV=development sequelize-cli db:migrate && node server.js",
     "lint": "eslint ./"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
