@@ -2,47 +2,68 @@
 
 ================ FR ====================
 
-## Comment lancer l'API en local:
+## Comment lancer l'API en local avec Docker:
+
+### Prérequis:
+
+Assurez-vous d'avoir Docker installé sur votre machine. Pour vérifier si Docker est installé, exécutez:
+
+```bash
+docker --version
+```
+
+Si vous n'avez pas Docker, suivez les instructions d'installation sur [le site officiel de Docker](https://docs.docker.com/get-docker/).
 
 ### Cloner le projet:
+
+```bash
+git clone https://github.com/fischer-c187/Docker-Billed-app-FR-Back.git
 ```
-git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
-```
-### Utilisez une version de node compatible
-Si vous utilisez une version récente de node sur votre ordinateur, il se peut qu'il y ai des erreurs lors de l'installation de certaines dépendances. Pour cela il est important de vous assurer que vous ayez une version de node compatible par exemple node v16 ou v18. 
 
-Voici quelques indications pour gérer les version de node sur votre ordinateur: 
-
-#### Sur Windows
-- Installer NVM pour windows (https://github.com/coreybutler/nvm-windows/tags)
-- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instruction de NVM pour windows : 
-    - `nvm install 18.16.1`
-    - `nvm use 18.16.1`
-- Ouvrir Powershell en mode administrateur
-- Entrer la commande «  Set-ExecutionPolicy RemoteSigned » pour pouvoir gérer l’execution de scripts dans powershell
-- Fermer toutes les instances de terminal
-- entrer la commande `npm install -g win-node-env` pour installer la gestion des variables d’environnement node pour window
-
-#### Sur Mac
-- Installer NVM (Node Version Manager) - https://github.com/nvm-sh/nvm
-- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instruction de NVM: 
-    - `nvm install 18.16.1`
-    - `nvm use 18.16.1`
 ### Acceder au repertoire du projet :
+
 ```
 cd Billed-app-FR-Back
 ```
 
-### Installer les dépendances du projet :
+### Construire l'image Docker
 
-```
-npm install
+Pour construire l'image Docker à partir de votre `Dockerfile`, exécutez la commande suivante dans le répertoire où se trouve votre `Dockerfile` :
+
+```bash
+docker build -t billed-backend .
 ```
 
-### Lancer l'API :
+### Exécuter le conteneur Docker
 
+Une fois l'image construite, vous pouvez exécuter un conteneur basé sur cette image avec la commande suivante :
+
+```bash
+docker run -p 5678:5678 --name billed -d billed-backend
 ```
-npm run run:dev
+
+### Arrêter le conteneur Docker
+
+Pour arrêter le conteneur, utilisez la commande suivante :
+
+```bash
+docker stop billed
+```
+
+### Relancer le conteneur Docker
+
+Pour relancer le conteneur, utilisez la commande suivante :
+
+```bash
+docker start billed
+```
+
+### Supprimer le conteneur Docker
+
+Après avoir arrêté le conteneur, vous pouvez le supprimer avec la commande suivante :
+
+```bash
+docker rm billed
 ```
 
 ### Accéder à l'API :
@@ -51,56 +72,97 @@ L'api est accessible sur le port `5678` en local, c'est à dire `http://localhos
 
 ## Utilisateurs par défaut:
 
-### administrateur : 
+### administrateur :
+
 ```
-utilisateur : admin@test.tld 
+utilisateur : admin@test.tld
 mot de passe : admin
 ```
+
 ### employé :
+
 ```
 utilisateur : employee@test.tld
 mot de passe : employee
 ```
 
-
 ================ EN ====================
 
+### Prerequisites:
 
-## How to run the API locally :
+Ensure you have Docker installed on your machine. To check if Docker is installed, run:
 
+```bash
+docker --version
+```
 
 ### Clone the projet:
+
 ```
-git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
+git clone https://github.com/fischer-c187/Docker-Billed-app-FR-Back.git
 ```
 
+If you don't have Docker, follow the installation instructions on [the official Docker website](https://docs.docker.com/get-docker/).
+
 ### Go to the project directory :
+
 ```
 cd Billed-app-FR-Back
 ```
 
-### Install project dependancies :
+### Build the Docker Image
 
-```
-npm install
+To build the Docker image from your `Dockerfile`, run the following command in the directory where your `Dockerfile` is located:
+
+```bash
+docker build -t billed-backend .
 ```
 
-### Run the API :
+### Run the Docker Container
 
+Once the image is built, you can run a container based on this image with the following command:
+
+```bash
+docker run -p 5678:5678 --name billed -d billed-backend
 ```
-npm run:dev
+
+### Stop the Docker Container
+
+To stop the container, use the following command:
+
+```bash
+docker stop billed
+```
+
+### Restart the Docker Container
+
+To restart the container, use the following command:
+
+```bash
+docker start billed
+```
+
+### Remove the Docker Container
+
+After stopping the container, you can remove it with the following command:
+
+```bash
+docker rm billed
 ```
 
 ### Access to the PAI :
 
 The API is locally available on port `5678`, go to `http://localhost:5678`
 
-### administrateur : 
+### administrateur :
+
 ```
-utilisateur : admin@company.tld 
+utilisateur : admin@company.tld
 mot de passe : admin
 ```
+
 ### employé :
+
 ```
 utilisateur : employee@company.tld
 mot de passe : employee
