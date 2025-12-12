@@ -9,26 +9,26 @@
 git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
 ```
 ### Utilisez une version de node compatible
-Si vous utilisez une version récente de node sur votre ordinateur, il se peut qu'il y ai des erreurs lors de l'installation de certaines dépendances. Pour cela il est important de vous assurer que vous ayez une version de node compatible par exemple node v16 ou v18. 
+Si vous utilisez une version récente de node sur votre ordinateur, il se peut qu'il y ait des erreurs lors de l'installation de certaines dépendances. Pour cela il est important de vous assurer que vous ayez une version de node compatible par exemple node v16 ou v18. 
 
 Voici quelques indications pour gérer les version de node sur votre ordinateur: 
 
 #### Sur Windows
 - Installer NVM pour windows (https://github.com/coreybutler/nvm-windows/tags)
-- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instruction de NVM pour windows : 
+- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instructions de NVM pour windows : 
     - `nvm install 18.16.1`
     - `nvm use 18.16.1`
 - Ouvrir Powershell en mode administrateur
 - Entrer la commande «  Set-ExecutionPolicy RemoteSigned » pour pouvoir gérer l’execution de scripts dans powershell
 - Fermer toutes les instances de terminal
-- entrer la commande `npm install -g win-node-env` pour installer la gestion des variables d’environnement node pour window
+- entrer la commande `npm install -g win-node-env` pour installer la gestion des variables d’environnement node pour windows
 
 #### Sur Mac
 - Installer NVM (Node Version Manager) - https://github.com/nvm-sh/nvm
-- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instruction de NVM: 
+- changer la version de node pour une version compatible (par exemple 18.16.1) pous cela suivre les instructions de NVM: 
     - `nvm install 18.16.1`
     - `nvm use 18.16.1`
-### Acceder au repertoire du projet :
+### Accéder au repertoire du projet :
 ```
 cd Billed-app-FR-Back
 ```
@@ -91,7 +91,7 @@ npm install
 npm run:dev
 ```
 
-### Access to the PAI :
+### Access to the API :
 
 The API is locally available on port `5678`, go to `http://localhost:5678`
 
